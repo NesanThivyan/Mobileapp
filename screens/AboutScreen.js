@@ -7,7 +7,7 @@ export default function WelcomeScreen({ navigation }) {
       {/* Ambulance Image */}
       <Image
         source={require('../assets/ambu.png')} // ✅ Make sure path is correct
-        className="w-100 h-80 mb-10 ml-80 mr-40 gradient-to-r from-[#0A0033] to-[#0A0F47]"
+        className="w-100 h-80 mb-10 ml-80 mr-40 gradient-to-r from-[#0A0033] to-[#0A0F97]"
         resizeMode="contain"
       />
 
