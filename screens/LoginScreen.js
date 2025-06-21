@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {/* Image Section */}
@@ -9,7 +9,9 @@ export default function LoginScreen() {
         <Image
           source={require('../assets/ambu.png')}
           style={styles.image}
-          resizeMode="contain" height={400} width={600}
+          resizeMode="contain"
+          height={400}
+          width={600}
         />
       </View>
 
@@ -34,8 +36,11 @@ export default function LoginScreen() {
           <Text style={styles.forgotText}>Forgot your password?</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Signin</Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Alert')}
+        >
+          <Text style={styles.buttonText}>Sign In</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
